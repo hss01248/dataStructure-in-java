@@ -47,6 +47,7 @@ public class Test {
 
         sort.select2(nums);
        // sort.heap(nums);
+        sort.quick(nums,0,nums.length-1);
 
 
 
