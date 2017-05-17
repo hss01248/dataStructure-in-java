@@ -5,5 +5,10 @@ package com.hss01248.sort;
  */
 public class Util {
 
+    public static void swap(Integer[] arr, int i, int j) {
+        int tmp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = tmp;
 
+    }
 }

@@ -15,13 +15,13 @@ public class Test {
 
     public static void main(String[] args){
 
-        final int num = 10000;
+        final int num = 50;
 
 
         final Integer[] nums = new Integer[num];
         randomNums(num, nums);
 
-        Sort sort = new Sort();
+        Sort2 sort = new Sort2();
        sort = ProxyUtil.getProxy(sort, new InvocationHandler() {
            public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
                MyLog.e("-----------------"+method.getName()+"---------------------");
@@ -39,14 +39,15 @@ public class Test {
        });
 
 
-       sort.bubble(nums);
+       sort.bubble2(nums);
        //sort.bubblePro(nums);
 
         sort.insert(nums);
-        sort.sheel(nums);
+        //sort.sheel(nums);
 
-        sort.select(nums);
-        sort.heap(nums);
+        sort.select2(nums);
+       // sort.heap(nums);
+        sort.quick(nums,0,nums.length-1);
 
 
 
