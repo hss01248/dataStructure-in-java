@@ -15,7 +15,7 @@ public class Test {
 
     public static void main(String[] args){
 
-        final int num = 50;
+        final int num = 5000;
 
 
         final Integer[] nums = new Integer[num];
@@ -47,7 +47,7 @@ public class Test {
 
         sort.select2(nums);
        // sort.heap(nums);
-        sort.quick(nums,0,nums.length-1);
+        sort.quick2(nums,0,nums.length-1);
 
 
 

@@ -102,8 +102,45 @@ public class Sort2 {
                 low++;
             }
             arr[high] = arr[low];//将比对照大的那个数移动到arr[high]原先空出的位置上
+            arr[low] = tmp;//将中轴的位置移动到最终空出来的low位置上,并返回该中轴的位置
         }
-        arr[low] = tmp;//将中轴的位置移动到最终空出来的low位置上,并返回该中轴的位置
+
         return low;
+    }
+
+    public void quick2(Integer[] arr,int low,int high){
+        int start = low;
+        int end = high;
+        int key = arr[start];
+        while (end>start){
+            while (end>start && arr[end]>=key){
+                end--;
+            }
+            if(arr[end]<=key){
+                Util.swap(arr,start,end);
+            }
+            while (end>start && arr[start]<=key){
+                start++;
+            }
+            if(arr[start] >=key){
+                Util.swap(arr,start,end);
+            }
+        }
+
+        if(start>low){
+            quick2(arr,low,start-1);
+        }
+        if(end<high){
+            quick2(arr,end+1,high);
+        }
+    }
+
+    public void quick3(Integer[] arr, int low,int high){
+        int start = low;
+        int end = high;
+        int key = arr[start];
+        while (start<end){
+
+        }
     }
 }
